@@ -245,6 +245,10 @@
 
 30. Como funciona a implementação `HashSet`? Qual a relação dela com o método `.hashCode()`?
 
+   ***O "HashSet é implementado como uma tabela hash usando uma instância de "HashMap" como apoio.***
+   
+   ***O ".hashCode" é quem define a unicidade dos itens que compoem o set.***
+
 31. Por que é recomendado que o *overriding* dos métodos `.equals(Object obj)` e `.hashCode()` seja realizado sempre em pares (ao sobreescrever um, o outro também deve ser sobreescrito)?
 
    ***Para que seja possivel manter a unicidade do objeto, o metodo "equals" utiliza o metodo "hashCode" para validar se o objeto passado via parametro é o mesmo que está efetuando a validação.***
@@ -289,7 +293,26 @@
 
 34. Qual é a estrutura de uma `stream`, em Java? Explique e dê um exemplo, em código.
 
-   ******
+   ***É uma forma de trabalhar de forma mais facil com coleções no java.***
+   
+   ***No exemplo abaixo a lista é transformada em uma stream, aplicado um filtro para trazer apenas números pares e no final o resultado é impresso em tela.***
+   ```java
+   import java.util.ArrayList;
+   import java.util.List;
+
+   public class programa {
+	    public static void main(String... args) {
+         List<Integer> lista = new ArrayList<Integer>();
+         lista.add(1);
+         lista.add(2);
+         lista.add(3);
+         lista.add(4);
+         lista.stream()
+	         .filter(e -> e % 2 == 0) // filtra numeros pares
+	         .forEach(System.out::println);
+      }
+   }   
+   ```
 
 35. O que falta no código abaixo para ser considerado um teste útil?
 
@@ -313,8 +336,9 @@
    ***O teste é implementado antes da funcionalidade.***
    
    ***Beneficios:***
-   
-   ******
+   ***Focar em problemas especificos no desenvolvimento;***
+   ***Criar codigos mais objetivos e de facil refatoração;***
+   ***Facilidade em encontrar bugs no cliclo de desenvolvimento;***
 
 37. Quais métodos podemos utilizar para validar o lançamento de exceções em testes automatizados?
 
