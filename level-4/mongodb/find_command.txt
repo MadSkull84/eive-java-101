@@ -1,0 +1,1 @@
+db.airbnb.find({"address.country_code":'BR'}, {_id:0}).sort({price:-1}).limit(1)

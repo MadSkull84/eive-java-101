@@ -1,0 +1,3 @@
+docker pull madskull84/eive-java-exam-4:prod
+docker build -t madskull84/eive-java-exam-4:prod .
+docker run --name petclinic -d -p 8080:8080 -e POSTGRES_URL=jdbc:postgresql://192.168.0.158:5432/petclinic -e POSTGRES_USER=petclinic -e POSTGRES_PASS=petclinic eive-java-exam-4:prod

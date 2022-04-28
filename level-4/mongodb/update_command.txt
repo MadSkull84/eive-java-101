@@ -1,0 +1,2 @@
+db.airbnb.updateOne({ _id:'20000001' },
+{ $set: { price: Decimal128("500.00") } } )
