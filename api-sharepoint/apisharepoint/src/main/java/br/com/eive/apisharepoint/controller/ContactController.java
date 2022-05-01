@@ -79,7 +79,7 @@ public class ContactController {
 	
 	@DeleteMapping("/{id}")
 	@Transactional
-	public ResponseEntity<?> deleteContac(@PathVariable Long id) {
+	public ResponseEntity<?> deleteContact(@PathVariable Long id) {
 		Optional<Contact> contact = contactRepository.findById(id);
 		if (contact.isPresent()) {
 			contactRepository.deleteById(id);

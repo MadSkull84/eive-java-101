@@ -49,7 +49,7 @@ public class ProductController {
 	
 	@PostMapping
 	@Transactional
-	public ResponseEntity<?> insertContact(@RequestBody @Valid ProductDTO productDTO, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<?> insertProduct(@RequestBody @Valid ProductDTO productDTO, UriComponentsBuilder uriBuilder) {
 		Optional<Customer> customer = customerRepository.findById(productDTO.getCustomerId());
 		if (!customer.isPresent()) {
 			return ResponseEntity.internalServerError().body(new CustomFormErrorDTO("customerId", "não encontrado"));
@@ -62,7 +62,7 @@ public class ProductController {
 	
 	@PutMapping("/{id}")
 	@Transactional
-	public ResponseEntity<?> updateContact(@PathVariable Long id, @RequestBody @Valid ProductDTO productDTO, UriComponentsBuilder uriBuilder) {		
+	public ResponseEntity<?> updateProduct(@PathVariable Long id, @RequestBody @Valid ProductDTO productDTO, UriComponentsBuilder uriBuilder) {		
 		Optional<Product> product = productRepository.findById(id);
 		if (!product.isPresent()) {
 			return ResponseEntity.noContent().build();	
@@ -79,7 +79,7 @@ public class ProductController {
 	
 	@DeleteMapping("/{id}")
 	@Transactional
-	public ResponseEntity<?> deleteContac(@PathVariable Long id) {
+	public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
 		Optional<Product> product = productRepository.findById(id);
 		if (product.isPresent()) {
 			productRepository.deleteById(id);
