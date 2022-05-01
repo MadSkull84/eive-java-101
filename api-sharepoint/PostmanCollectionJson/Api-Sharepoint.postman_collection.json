@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "8e8bcc52-d92e-4b36-9c9d-4334a65ded5a",
+		"name": "Api-Sharepoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "get Contact",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/contact/customer/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"contact",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post Contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"Con 1\",\r\n   \"email\":\"\",\r\n   \"phone\":\"\",\r\n   \"cellphone\":\"\",\r\n   \"main\":false,\r\n   \"customerId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/contact/",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"contact",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://api-sharepoint.eive.com.br:8081/contact/4",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"AAAA\",\r\n   \"email\":\"\",\r\n   \"phone\":\"\",\r\n   \"cellphone\":\"\",\r\n   \"main\":true,\r\n   \"customerId\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/contact/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del Contact",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/contact/5",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"contact",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "get Customer Name and All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/customer",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n      \"name\":\"Soft\",\r\n      \"notes\":\"\",\r\n      \"dbInfo\":\"\",\r\n      \"usesVpn\":false,\r\n      \"usesNewIntegration\":false,\r\n      \"tier\":\"A\",\r\n      \"segment\":\"\",\r\n      \"responsible\":\"Db1\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Customer Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/customer/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n      \"name\":\"Eive\",\r\n      \"notes\":\"\",\r\n      \"dbInfo\":\"\",\r\n      \"usesVpn\":false,\r\n      \"usesNewIntegration\":false,\r\n      \"tier\":\"C\",\r\n      \"segment\":\"\",\r\n      \"responsible\":\"C\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server",
+			"item": [
+				{
+					"name": "get Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/server/customer/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"server",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post Server",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ip\":\"192.168.0.10\",\r\n   \"dns\":\"dns.google.to.errado\",\r\n   \"login\":\"Login\",\r\n   \"password\":\"fort3\",\r\n   \"name\":\"Zeh\",\r\n   \"notes\":\"\",\r\n   \"customerId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/server",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"server"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put Server",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ip\":\"192.168.0.10\",\r\n   \"dns\":\"dns.google.to.errado\",\r\n   \"login\":\"Login\",\r\n   \"password\":\"fort3\",\r\n   \"name\":\"Jaum\",\r\n   \"notes\":\"\",\r\n   \"customerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/server/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"server",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Server",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/server/2",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"server",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/product/customer/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"Pro 1\",\r\n   \"notes\":\"\",\r\n   \"acquisitionDate\":\"2022-04-22\",\r\n   \"customerId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/product",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\":\"Pro 1 - Alt\",\r\n   \"notes\":\"\",\r\n   \"acquisitionDate\":\"2022-04-22\",\r\n   \"customerId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/product/1",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://api-sharepoint.eive.com.br:8081/product/5",
+							"protocol": "http",
+							"host": [
+								"api-sharepoint",
+								"eive",
+								"com",
+								"br"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
